@@ -366,7 +366,7 @@ inserted_id = insert_get_id_data('users', data_to_insert, 'user_id')
       </section>
 </section>
 
-
+<section id="delete_data">
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -419,7 +419,9 @@ inserted_id = insert_get_id_data('users', data_to_insert, 'user_id')
         </pre>
         <p className="mb-4">Variabel <code>delete_success</code> akan berisi <code>True</code> jika penghapusan berhasil.</p>
       </section>
+      </section>
 
+      <section id="insert_and_get_id_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -486,6 +488,7 @@ update_success = update_data('my_table', data_to_update, filters)`}
         <p className="mb-4">Variabel <code>update_success</code> akan berisi <code>True</code> jika pembaruan berhasil.</p>
       </section>
 
+      <section id="first_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -569,7 +572,7 @@ result = first_data('users', filters={'status': 'active'}, columns=['name', 'ema
         <p className="mb-4">Variabel <code>Result </code>akan berisi <code>dictionary </code>dari <code>baris pertama yang sesuai dengan filter dan urutan yang diberikan, atau None</code> jika tidak ada data yang cocok.</p>
       </section>
 
-
+      <section id="Count_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -639,6 +642,8 @@ active_users_count = count_data('users', filters={'status': 'active'})
         <p className="mb-4">Variabel <code>active_users_count  </code>akan berisi <code>jumlah baris di tabel users </code>yang <code>memiliki status ( active ). </code> Jika tidak ada data yang cocok, hasilnya adalah 0.</p>
       </section>
 
+
+      <section id="Pluck_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -704,6 +709,8 @@ emails = pluck_data('users', 'email', filters={'status': 'active'})
         <p className="mb-4">Variabel <code>Emails </code>akan berisi <code>daftar alamat email </code>dari pengguna yang memiliki status<code> ( active )</code>.</p>
       </section>
 
+
+      <section id="distinct_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -770,6 +777,8 @@ categories = distinct_data('products', 'category', filters={'status': 'available
         <p className="mb-4">Variabel <code>Categories </code>akan berisi <code>daftar kategori produk yang unik </code>dan<code> memiliki status ( available )</code>.</p>
       </section>
 
+
+      <section id="order_by_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -859,6 +868,8 @@ employees = order_by_data('employees', 'salary', ascending=False, filters={'depa
         <p className="mb-4">Variabel <code>Employees </code>akan berisi <code>daftar 5 karyawan </code>dari <code>departemen HR</code>, diurutkan berdasarkan salary secara descending.</p>
       </section>
 
+
+      <section id="exists_data"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -930,6 +941,7 @@ is_exists = exists_data('users', {'username': 'john_doe'}, exclude_id=5)
         <p className="mb-4">Jika data dengan username <code>( john_doe ) </code>ada tetapi bukan dengan ID <code>5</code>, maka is_exists akan bernilai True.</p>
       </section>
       
+      <section id="fetch_records_with_condition"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1007,6 +1019,8 @@ users = fetch_records_with_conditions('users', null_column='email', additional_f
         <p className="mb-4">Pada contoh di atas, <code>users </code>berisi daftar pengguna yang memiliki <code>email NULL dan status ( active ).</code></p>
       </section>
 
+
+      <section id="get_a_single_value_from_a_table"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1088,6 +1102,8 @@ user_uuid = get_value('users', 'uuid_column', filters={'username': 'john_doe'}, 
         <p className="mb-4">Fungsi pertama mengambil email dari pengguna yang memiliki username <code>( john_doe ) </code>dan fungsi kedua mencoba untuk mengambil UUID pengguna dengan username ( john_doe ), dan jika tidak ditemukan, akan menghasilkan error khusus terkait UUID.</p>
       </section>
 
+
+      <section id="save_an_uploaded_file_to_a_specific_directory"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1160,6 +1176,8 @@ file_path = save_uploaded_file(uploaded_file, upload_dir='documents')
         <p className="mb-4">File yang diunggah akan disimpan dalam direktori documents dan nama file akan diberi timestamp . Jika file dengan nama yang sama sudah ada, angka akan ditambahkan pada nama file untuk memastikan nama unik.</p>
       </section>
 
+
+      <section id="sum_data_from_a_column_in_a_table"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1225,6 +1243,8 @@ total_sales = sum_data('sales', 'amount', filters={'status': 'completed'})
         <p className="mb-4">Fungsi sum_data akan menjumlahkan nilai dalam kolom <code>&quot;amount&quot;</code> pada tabel <code>&quot;sales&quot;</code> yang memiliki filter <code>&quot;status&quot;</code> = <code>&quot;completed&quot;</code>.</p>
       </section>
 
+
+      <section id="get_the_last_row_of_data_from_a_table"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1303,6 +1323,8 @@ last_order = last_data('orders', filters={'status': 'shipped'})
 </p>
       </section>
 
+
+      <section id="convert_uuid_to_user_id_from_jwt"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1349,6 +1371,7 @@ else:
 </p>
       </section>
 
+      <section id="validate_request_json_from_frontend"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
@@ -1522,6 +1545,8 @@ else:
 </p>
       </section>
 
+
+      <section id="validate_http_method"></section>
       <section className="mb-8">
   <h2 className="text-2xl font-semibold mb-4 flex items-center">
     <span className="flex items-center gap-2">
